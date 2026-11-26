@@ -1,0 +1,6 @@
+DDSReaderSharp (Alex Green, MIT) is a C# port of DDSReader.java:
+
+DDSReader.java
+Copyright (c) 2015 Kenji Sasaki
+Released under the MIT license.
+https://github.com/npedotnet/DDSReader

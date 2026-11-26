@@ -1,0 +1,11 @@
+# Leon pl08: body + head + face + hair + scar + right hand + left hand
+# BIN/TPL pairs come from the list: 000/001, 002/003, 004/003, 005/003, 010/011, 014/013, 016/013
+# Put this file in the folder with the extracted pl08_xxx.BIN / .TPL files.
+Output: out/pl08_merged
+Part: pl08_000.BIN, pl08_001.TPL
+Part: pl08_002.BIN, pl08_003.TPL
+Part: pl08_004.BIN, pl08_003.TPL
+Part: pl08_005.BIN, pl08_003.TPL
+Part: pl08_010.BIN, pl08_011.TPL
+Part: pl08_014.BIN, pl08_013.TPL
+Part: pl08_016.BIN, pl08_013.TPL

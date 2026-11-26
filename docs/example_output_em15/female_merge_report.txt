@@ -1,0 +1,44 @@
+RE4 UHD BIN/TPL MERGE REPORT
+============================
+Output BIN : female.bin
+Output TPL : female.tpl
+
+INPUT PARTS
+-----------
+[0] BIN em15_453.BIN + TPL em15_454.TPL
+     vertices 1920, materials 6, bones 34, weighted yes
+[1] BIN em15_455.BIN + TPL em15_454.TPL
+     vertices 1659, materials 6, bones 34, weighted yes
+[2] BIN em15_456.BIN + TPL em15_454.TPL
+     vertices 142, materials 1, bones 34, weighted yes
+[3] BIN em15_463.BIN + TPL em15_464.TPL
+     vertices 224, materials 2, bones 34, weighted yes
+[4] BIN em15_444.BIN + TPL em15_454.TPL
+     vertices 299, materials 1, bones 34, weighted yes
+[5] BIN em15_449.BIN + TPL em15_454.TPL
+     vertices 307, materials 1, bones 34, weighted yes
+
+MERGED TPL  (new index -> PackID / TextureID, and where it came from)
+--------------------------------------------------------------------
+TPL 000  Pack 00000015  Tex 0051  256x256   <- part0:old0, part1:old0, part2:old0, part4:old0, part5:old0
+TPL 001  Pack 00000015  Tex 0052  256x256   <- part0:old1, part1:old1, part2:old1, part4:old1, part5:old1
+TPL 002  Pack 00000015  Tex 0053  256x256   <- part0:old2, part1:old2, part2:old2, part4:old2, part5:old2
+TPL 003  Pack 00000015  Tex 0054  64x64   <- part3:old0
+
+MERGED BIN LAYOUT
+-----------------
+Vertices        : 4551
+Materials       : 5 (identical materials joined)
+Bones           : 34
+Bone pairs      : 2
+Weight maps     : 119
+Vertex colors   : yes
+
+Order  Diff Bump Opac Spec CSpc  Triangles  Contains
+    0   001   --   --   --   --        706  part0/mat0
+    1   002   --   --   --   --       1064  part0/mat1 + part0/mat2 + part0/mat3 + part0/mat4 + part0/mat5 + part4/mat0 + part5/mat0
+    2   000   --   --   --   --       1195  part1/mat0 + part1/mat1 + part1/mat2 + part1/mat3 + part1/mat5 + part2/mat0
+    3   000   --   --  000   --         48  part1/mat4
+    4   003   --   --   --   --        144  part3/mat0 + part3/mat1
+
+No warnings.

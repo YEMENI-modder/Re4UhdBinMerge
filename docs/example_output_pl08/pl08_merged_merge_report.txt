@@ -1,0 +1,76 @@
+RE4 UHD BIN/TPL MERGE REPORT
+============================
+Output BIN : pl08_merged.bin
+Output TPL : pl08_merged.tpl
+
+INPUT PARTS
+-----------
+[0] BIN pl08_000.BIN + TPL pl08_001.TPL
+     vertices 5425, materials 8, bones 119, weighted yes
+[1] BIN pl08_002.BIN + TPL pl08_003.TPL
+     vertices 3127, materials 3, bones 35, weighted yes
+[2] BIN pl08_004.BIN + TPL pl08_003.TPL
+     vertices 3, materials 1, bones 33, weighted yes
+[3] BIN pl08_005.BIN + TPL pl08_003.TPL
+     vertices 2432, materials 39, bones 33, weighted yes
+[4] BIN pl08_010.BIN + TPL pl08_011.TPL
+     vertices 13, materials 1, bones 119, weighted yes
+[5] BIN pl08_014.BIN + TPL pl08_013.TPL
+     vertices 802, materials 2, bones 2, weighted yes
+[6] BIN pl08_016.BIN + TPL pl08_013.TPL
+     vertices 800, materials 2, bones 2, weighted yes
+
+MERGED TPL  (new index -> PackID / TextureID, and where it came from)
+--------------------------------------------------------------------
+TPL 000  Pack 01000008  Tex 0034  256x256   <- part0:old0
+TPL 001  Pack 01000008  Tex 0008  256x256   <- part0:old1
+TPL 002  Pack 01000008  Tex 0000  256x256   <- part0:old2
+TPL 003  Pack 01000008  Tex 0001  256x256   <- part0:old3
+TPL 004  Pack 01000008  Tex 0035  256x256   <- part0:old4
+TPL 005  Pack 01000008  Tex 0005  256x256   <- part0:old5
+TPL 006  Pack 01000008  Tex 0036  256x256   <- part0:old6
+TPL 007  Pack 01000008  Tex 0037  256x256   <- part0:old7
+TPL 008  Pack 01000008  Tex 0009  256x256   <- part1:old0, part2:old0, part3:old0
+TPL 009  Pack 01000008  Tex 0010  256x256   <- part1:old1, part1:old3, part2:old1, part2:old3, part3:old1, part3:old3
+TPL 010  Pack 01000008  Tex 0011  256x256   <- part1:old2, part2:old2, part3:old2
+TPL 011  Pack 01000008  Tex 0013  256x256   <- part1:old4, part1:old8, part2:old4, part2:old8, part3:old4, part3:old8
+TPL 012  Pack 01000008  Tex 0030  256x256   <- part1:old5, part2:old5, part3:old5
+TPL 013  Pack 01000008  Tex 0031  256x256   <- part1:old6, part2:old6, part3:old6
+TPL 014  Pack 07000000  Tex 0034  256x256   <- part1:old7, part2:old7, part3:old7
+TPL 015  Pack 01000008  Tex 0014  32x16   <- part4:old0
+TPL 016  Pack 01000008  Tex 0015  32x16   <- part4:old1
+TPL 017  Pack 01000008  Tex 0016  128x64   <- part5:old0, part6:old0
+TPL 018  Pack 01000008  Tex 0017  64x32   <- part5:old1, part6:old1
+
+MERGED BIN LAYOUT
+-----------------
+Vertices        : 12602
+Materials       : 17 (identical materials joined)
+Bones           : 119
+Bone pairs      : 7
+Weight maps     : 236
+Vertex colors   : no
+
+Order  Diff Bump Opac Spec CSpc  Triangles  Contains
+    0   000   --   --   --   --        740  part0/mat0
+    1   001   --   --   --   --        628  part0/mat1
+    2   002   --   --   --   --        238  part0/mat2
+    3   003   --   --   --   --        863  part0/mat3
+    4   004   --   --   --   --         88  part0/mat4
+    5   005   --   --   --   --        824  part0/mat5
+    6   006   --   --   --   --         88  part0/mat6
+    7   007   --   --   --   --        234  part0/mat7
+    8   011   --   --   --   --       1987  part1/mat0
+    9   014   --   --   --   --         36  part1/mat1
+   10   012   --  013   --   --        248  part1/mat2
+   11   008   --   --   --   --          1  part2/mat0
+   12   010   --  009   --   --        310  part3/mat0 + part3/mat1 + part3/mat3 + part3/mat5 + part3/mat8 + part3/mat10 + part3/mat33 + part3/mat36
+   13   008   --  009   --   --       1590  part3/mat2 + part3/mat4 + part3/mat6 + part3/mat7 + part3/mat9 + part3/mat11 + part3/mat12 + part3/mat13 + part3/mat14 + part3/mat15 + part3/mat16 + part3/mat17 + part3/mat18 + part3/mat19 + part3/mat20 + part3/mat21 + part3/mat22 + part3/mat23 + part3/mat24 + part3/mat25 + part3/mat26 + part3/mat27 + part3/mat28 + part3/mat29 + part3/mat30 + part3/mat31 + part3/mat32 + part3/mat34 + part3/mat35 + part3/mat37 + part3/mat38
+   14   015   --  016   --   --          7  part4/mat0
+   15   017   --   --   --   --        878  part5/mat0 + part6/mat0
+   16   017  018   --  017   --        306  part5/mat1 + part6/mat1
+
+WARNINGS
+--------
+* 9 bone(s) have a different parent in a later part than in the first part that defines them. The first definition was kept (put the full-body BIN first).
+* Weight maps reduced from 388 to 236 by rounding vertex weights to steps of 10% (the base game accepts only 255).

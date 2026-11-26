@@ -1,0 +1,12 @@
+# em15 villager (female): body + head + neck + head cover + both hands.
+# Put this file in the folder with the extracted em15_xxx.BIN / .TPL files.
+# Hands and neck use the TPL of the body they are merged with (454); the head cover has its own TPL (464).
+# "Textures" is optional: the folder with the DDS/TGA files (00000015) for the textured preview.
+Output: out/female
+Textures: 00000015
+Part: em15_453.BIN, em15_454.TPL
+Part: em15_455.BIN, em15_454.TPL
+Part: em15_456.BIN, em15_454.TPL
+Part: em15_463.BIN, em15_464.TPL
+Part: em15_444.BIN, em15_454.TPL
+Part: em15_449.BIN, em15_454.TPL

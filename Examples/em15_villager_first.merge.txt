@@ -1,0 +1,6 @@
+Output: out/villager_first
+Part: em15_440.BIN, em15_441.TPL
+Part: em15_442.BIN, em15_441.TPL
+Part: em15_443.BIN, em15_441.TPL
+Part: em15_444.BIN, em15_441.TPL
+Part: em15_449.BIN, em15_441.TPL

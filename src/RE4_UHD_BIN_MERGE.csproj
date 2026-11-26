@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>RE4_UHD_BIN_MERGE</AssemblyName>
+    <RootNamespace>RE4BinMerge</RootNamespace>
+    <Version>1.0.0</Version>
+    <Product>RE4 UHD BIN + TPL Merge Tool</Product>
+    <Authors>YEMENI-modder</Authors>
+    <Company>YEMENI-modder</Company>
+    <Copyright>Copyright (c) 2026 YEMENI</Copyright>
+    <RepositoryUrl>https://github.com/YEMENI-modder/Re4UhdBinMerge</RepositoryUrl>
+    <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="*.cs" />
+    <Compile Include="Lib\**\*.cs" />
+  </ItemGroup>
+</Project>

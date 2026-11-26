@@ -1,0 +1,14 @@
+bin/
+obj/
+out/
+.vs/
+*.user
+*.suo
+# game assets must never be committed
+*.BIN
+*.bin
+*.TPL
+*.tpl
+*.dds
+*.tga
+!Prebuilt/**
